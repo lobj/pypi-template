@@ -16,7 +16,7 @@ upgrade: requirements
 test: requirements
 	tox
 
-dist: requirements
+dist:
 	rm -rf $@
 	python setup.py sdist bdist_wheel
 
