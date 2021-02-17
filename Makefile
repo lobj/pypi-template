@@ -13,10 +13,10 @@ requirements: .python-version requirements.txt
 upgrade: requirements
 	@pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
 
-test: requirements
+test:
 	tox
 
-dist: requirements
+dist: 
 	rm -rf $@
 	python setup.py sdist bdist_wheel
 
@@ -42,3 +42,15 @@ clean:
 	find . | grep '\.backup' | xargs rm
 
 .PHONY: dist docs
+
+
+install:
+	python3 setup.py install
+uninstall:
+	pip3 uninstall pypi-template2  -y
+reinstall: clean
+	make uninstall
+	make install
+
+test2:
+	cd ../ && mkdir aas && cd aas && pypi-template2

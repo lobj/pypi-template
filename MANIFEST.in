@@ -1,4 +1,4 @@
 include .github/README.md
-recursive-include pypi_template/templates *
+recursive-include pypi_template2/templates *
 global-exclude __pycache__
 global-exclude *.py[co]

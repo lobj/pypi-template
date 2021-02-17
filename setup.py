@@ -2,7 +2,7 @@ import os
 import re
 import setuptools
 
-NAME             = "pypi-template"
+NAME             = "pypi-template2"
 AUTHOR           = "Christophe VG"
 AUTHOR_EMAIL     = "contact@christophe.vg"
 DESCRIPTION      = "A managed template repository for PyPi packages"
@@ -30,7 +30,7 @@ INSTALL_REQUIRES = [
 ]
 ENTRY_POINTS = {
   "console_scripts" : [
-    "pypi-template=pypi_template.__main__:cli",
+    "pypi-template2=pypi_template2.__main__:cli",
     
   ]
 }

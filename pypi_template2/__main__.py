@@ -29,7 +29,7 @@ class CLI(object):
     self.yes        = yes
     
     self.environment = Environment(
-      loader=PackageLoader("pypi_template", "templates")
+      loader=PackageLoader("pypi_template2", "templates")
     )
     self.environment.keep_trailing_newline=True
     self.system_vars = {
@@ -57,7 +57,7 @@ class CLI(object):
   def load_resource(self, *args):
     return resource_string(__name__, os.path.join("templates", *args))
 
-  def list_resources(self, package="pypi_template.templates"):
+  def list_resources(self, package="pypi_template2.templates"):
     EXCLUDED_EXT = ".pyc"
     EXCLUDED     = [ "__init__.py", "__pycache__" ]
     files = []

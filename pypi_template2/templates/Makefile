@@ -42,3 +42,11 @@ clean:
 	find . | grep '\.backup' | xargs rm
 
 .PHONY: dist docs
+
+install:
+	python3 setup.py install
+uninstall:
+	pip3 uninstall ${PROJECT}  -y
+reinstall:
+	make uninstall
+	make install
